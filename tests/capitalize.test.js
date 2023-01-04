@@ -1,12 +1,6 @@
-#!/usr/bin/env node
+import { strict as assert } from 'node:assert';
 import capitalize from '../src/capitalize.js';
 
-if (capitalize('hello') !== 'Hello') {
-  throw new Error('BOOM');
-}
-
-if (capitalize('') !== '') {
-  throw new Error('BOOM');
-}
-
-console.log('Completed!');
+assert.equal(capitalize('kitty'), 'Kitty');
+assert.equal(capitalize(''), '');
+console.log('COMPLETED!');
